@@ -14,6 +14,11 @@ for line in db:
     temp.append(a[2])
 db.close()
 
+for i in range(len(years)):
+    print(years[i], end=" ")
+    print(co2[i], end=" ")
+    print(temp[i])
+    
 plt.subplot(2, 1, 1)
 plt.plot(years, co2, 'b--') 
 plt.title("Climate Data") 

@@ -1,9 +1,18 @@
 import matplotlib.pyplot as plt
 import pandas as pd
 
+db = open('climate.csv', mode='r')
+
 years = []
 co2 = []
 temp = []
+
+for line in db:
+    a = line.strip("\n").split(",")
+    years.append(a[0])
+    co2.append(a[1])
+    temp.append(a[2])
+db.close()
 
 plt.subplot(2, 1, 1)
 plt.plot(years, co2, 'b--') 

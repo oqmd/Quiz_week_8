@@ -16,3 +16,11 @@ plt.ylabel("Temp (C)")
 plt.xlabel("Year (decade)") 
 plt.show() 
 plt.savefig("co2_temp_1.png") 
+
+db = open('climate.csv', mode='r')
+arr = dict()
+action = 0
+for line in db:
+    a = line.strip("\n").split(",")
+    print(a)
+db.close()
